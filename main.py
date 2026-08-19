@@ -97,7 +97,7 @@ def get_issues(
     return result[skip:skip + limit]
 
 @app.get("/issues/{issue_id}", response_model=Issue)
-def get_issue_by_ID(issue_id:int):
+def get_issue_by_id(issue_id:int):
     for issue in issues:
         if issue_id == issue.id:
             return issue   
